@@ -1,4 +1,5 @@
 import socket
+import sys
 import time
 import os
 import random
@@ -26,16 +27,16 @@ Banner
     
 def getport():
     try:
-        p = int(input(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "Port:\r\n"))
+        p = int(input(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "╰─> Port:\r\n"))
         return p
     except ValueError:
         print(ConsoleColors.BOLD + ConsoleColors.WARNING + "ERROR Port must be a number, Set Port to default " + ConsoleColors.OKGREEN + "80")
         return 80
-
-host = input(ConsoleColors.BOLD + ConsoleColors.OKBLUE + "Host:\r\n")
+print(ConsoleColors.BOLD + "╭──[CullaKun]──⬣")
+host = input(ConsoleColors.BOLD + ConsoleColors.BOLD + "╰─> Host:\r\n")
 port = getport()
-speedPerRun = int(input(ConsoleColors.BOLD + ConsoleColors.HEADER + "Hits Per Run:\r\n"))
-threads = int(input(ConsoleColors.BOLD + ConsoleColors.WARNING + "Thread Count:\r\n"))
+speedPerRun = int(input(ConsoleColors.BOLD + ConsoleColors.BOLD + "╰─> Hits Running:\r\n"))
+threads = int(input(ConsoleColors.BOLD + ConsoleColors.BOLD + "╰─> Thread Count:\r\n"))
 
 ip = socket.gethostbyname(host)
 
@@ -74,17 +75,17 @@ def goForDosThatThing():
 try:
         
     print(ConsoleColors.BOLD + ConsoleColors.OKBLUE + '''
-    Banner                                                                 |___/ 
+    Banner                                                                  
           ''')
-    print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "LOADING >> [                    ] 0% ")
+    print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "LOADING >> [     1] 0% ")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "LOADING >> [=====               ] 25%")
+    print(ConsoleColors.BOLD + ConsoleColors.OKGREEN + "LOADING >> [     2] 25%")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.WARNING + "LOADING >> [==========          ] 50%")
+    print(ConsoleColors.BOLD + ConsoleColors.WARNING + "LOADING >> [     3] 50%")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.WARNING + "LOADING >> [===============     ] 75%")
+    print(ConsoleColors.BOLD + ConsoleColors.WARNING + "LOADING >> [     4] 75%")
     time.sleep(1)
-    print(ConsoleColors.BOLD + ConsoleColors.FAIL + "LOADING >> [====================] 100%")
+    print(ConsoleColors.BOLD + ConsoleColors.FAIL + "LOADING >> [        5] 100%")
     
     for i in range(threads):
         try:
