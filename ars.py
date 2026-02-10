@@ -3,8 +3,8 @@ import sys
 import time
 import os
 import random
-
 from threading import Thread
+from colorama import init, Fore, Back, Style
 
 os.system("clear")
 
@@ -18,8 +18,20 @@ class Colors:
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     BOLD = '\033[1m'
-    
-print(Colors.BOLD + Colors.WARNING + '''
+    BLACK = '\033[30m'
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    MAGENTA = '\033[35m'
+    CYAN = '\033[36m'
+    WHITE = '\033[37m'
+    RESET = '\033[0m' # Resets color to default
+
+# Example usage:
+print(RED + "This text is red." + RESET)
+
+print(Colors.BOLD + Colors.BLACK + '''
 Banner 
 
          
