@@ -29,7 +29,7 @@ class Colors:
     RESET = '\033[0m' # Resets color to default
 
 
-print(Colors.BOLD + Colors.BLACK + RESET +'''
+print(Colors.BOLD + Colors.CYAN +'''
 Banner 
 
          
