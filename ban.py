@@ -31,8 +31,14 @@ class Colors:
 
 print(Colors.BOLD + Colors.CYAN +'''
 Banner 
-
-         
+      ╭────────╮
+     ╭│───────╮│
+     │╰──────╮╰╯
+ ╭─╯           │
+ ╯╭───────╯    
+  │   
+╭╯     
+╭─
       ''')
     
 def getport():
