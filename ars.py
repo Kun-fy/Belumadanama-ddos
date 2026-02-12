@@ -103,15 +103,15 @@ try:
     print(Colors.BOLD + Colors.OKBLUE + '''
     Banner                                                                  
           ''')
-    print(Colors.BOLD + Colors.WARNING + "Loading > [     1] 0% ")
+    print(Colors.BOLD + Colors.WARNING + "Gunakan dengan bener² baik")
     time.sleep(1)
-    print(Colors.BOLD + Colors.WARNING + "Loading > [     2] 25%")
+    print(Colors.BOLD + Colors.WARNING + "Baik² bener")
     time.sleep(1)
-    print(Colors.BOLD + Colors.WARNING + "Loading > [     3] 50%")
+    print(Colors.BOLD + Colors.WARNING + "Loading 1")
     time.sleep(1)
-    print(Colors.BOLD + Colors.WARNING + "Loading > [     4] 75%")
+    print(Colors.BOLD + Colors.WARNING + "Loading 2")
     time.sleep(1)
-    print(Colors.BOLD + Colors.FAIL + "Loading > [     5] 100%")
+    print(Colors.BOLD + Colors.FAIL + "serrr....ah!")
     
     for i in range(threads):
         try:
