@@ -103,15 +103,15 @@ try:
     print(Colors.BOLD + Colors.OKBLUE + '''
     Banner                                                                  
           ''')
-    print(Colors.BOLD + Colors.WARNING + "Gunakan dengan bener² baik")
+    print(Colors.BOLD + Colors.WARNING + "This script is dedicated")
     time.sleep(1)
-    print(Colors.BOLD + Colors.WARNING + "Baik² bener")
+    print(Colors.BOLD + Colors.WARNING + "To help the struggle")
     time.sleep(1)
-    print(Colors.BOLD + Colors.WARNING + "Loading 1")
+    print(Colors.BOLD + Colors.WARNING + "In fighting oppression")
     time.sleep(1)
-    print(Colors.BOLD + Colors.WARNING + "Loading 2")
+    print(Colors.BOLD + Colors.WARNING + "Monkey nation")
     time.sleep(1)
-    print(Colors.BOLD + Colors.FAIL + "serrr....ah!")
+    print(Colors.BOLD + Colors.FAIL + "towards our Palestinian brothers")
     
     for i in range(threads):
         try:
